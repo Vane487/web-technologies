@@ -16,7 +16,7 @@
     color: #000;
     position: absolute;
     bottom: 0;
-    transition: all 0.3s ease;
+
 }
 
 
@@ -27,27 +27,6 @@
 .block--right {
     right: 60px;
 }
-
-.block--center {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 90px;
-    width: 170px;
-    height: 120px;
-    line-height: 120px;
-    background: #4a86d9;
-    color: #fff;
-    border: 1px solid #000;
-    display: none;
-}
-
-
-.block--left:hover + .block--center {
-    display: block;
-}
-
-
 
 
 .block--left {
@@ -71,6 +50,7 @@
     color: #fff;
     border: 1px solid #000;
     display: none;
+    text-align: center;
 }
 
 
@@ -79,12 +59,12 @@
 }
 
 
-.block--right:hover {
-    pointer-events: all;
+.block--left:hover + .block--center {
+    display: block;
 }
 
-.wrapper:hover .block--right:hover ~ .block--left,
-.wrapper:has(.block--right:hover) .block--left {
+
+.wrapper:hover .block--right:hover ~ .block--left {
     opacity: 0;
     visibility: hidden;
 }
